@@ -9,6 +9,7 @@ Travel enthusiasts struggling to grapple their itineraries, packing for multi-ci
 - [Configuration](#configuration)
 - [Credits](#credits)
 - [Website](#website)
+- [Images](#images)
 - [License](#license)
 
 ## Introduction
@@ -36,6 +37,7 @@ This Weather Dashboard was created by Ben McCormick following the demo provided 
 ## Website
 https://mcrmickben45.github.io/Weather-App-Dashboard/
 
+## Images
 
 <img width="1435" alt="Screen Shot 2024-01-30 at 4 02 44 AM" src="https://github.com/mcrmickben45/Weather-App-Dashboard/assets/137113252/3438e891-e753-4cc0-9b7b-62ede4eb99de">
 <img width="1422" alt="Screen Shot 2024-01-30 at 4 03 07 AM" src="https://github.com/mcrmickben45/Weather-App-Dashboard/assets/137113252/32710192-db89-4ca6-9d7c-92acf13655a2">
