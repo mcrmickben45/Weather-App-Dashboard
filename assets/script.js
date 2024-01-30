@@ -1,3 +1,4 @@
+// DOM elements
 const searchInput = document.querySelector(".inputValue");
 const searchBtn = document.querySelector(".searchBtn");
 const currentDate = moment();
@@ -7,22 +8,29 @@ const temp = document.querySelector(".temp");
 const humidity = document.querySelector(".humidity");
 const wind = document.querySelector(".wind");
 const uvi = document.querySelector(".uvi");
+
+// Retrieve recent searches from local storage
 const recentSearches = JSON.parse(localStorage.getItem("recents") || "[]");
 const recentContainer = $("#recent");
 const inputValue = $("#inputValue");
 const clear = $("#clearHistory");
 
+// Render recent searches
 renderRecents();
 
+// Function to render recent searches in the UI
 function renderRecents() {
   recentContainer.empty();
 
   for (let i = 0; i < recentSearches.length; i++) {
+    // Create input elements for each recent search
     var recentInput = $("<input>");
     recentInput.attr("type", "text");
     recentInput.attr("readonly", true);
     recentInput.attr("class", "form-control-lg text-black");
     recentInput.attr("value", recentSearches[i]);
+
+    // Attaches click event to fetch weather for the selected city
     recentInput.on("click", function() {
       getWeather($(this).attr("value"));
     });
@@ -30,6 +38,7 @@ function renderRecents() {
   }
 }
 
+// Event handler for the search form submission
 var searchSubmitHandler = function (event) {
   event.preventDefault;
 
@@ -44,6 +53,7 @@ var searchSubmitHandler = function (event) {
   }
 };
 
+// Async function to fetch weather data for a given city
 async function getWeather(city) {
     var apiUrl =
       "https://api.openweathermap.org/data/2.5/weather?q=" +
@@ -60,11 +70,15 @@ async function getWeather(city) {
       console.log(data);
       var lat = data.coord.lon;
       var lon = data.coord.lat;
+
+      // Fetch UV index for the given coordinates
       await uvIndex(data.coord.lat, data.coord.lon);
+
       var icon = data.weather[0].icon;
       var weatherURL = `https://openweathermap.org/img/wn/${icon}.png`;
       var icon = `<img src="${weatherURL}"/>`;
   
+      // Update UI with weather information
       cityDateIcon.innerHTML =
         nameValue + currentDate.format(" (M/DD/YYYY) ") + icon;
       temp.innerHTML = "Temperature: " + tempValue + " °F";
@@ -73,6 +87,7 @@ async function getWeather(city) {
         topContainer.classList.remove("hide");
       console.log(icon);
 
+      // Check for duplicate searches in recent searches
       let newWeatherItem = city;
       var newSearches = recentSearches.filter((search) => {
           if (search.city === newWeatherItem.city) {
@@ -87,6 +102,7 @@ async function getWeather(city) {
     }
   };
 
+  // Function to update local storage with recent searches
   function setLocalStorage(city) {
     if (recentSearches.indexOf(city) === -1) {
       recentSearches.push(city);
@@ -94,6 +110,7 @@ async function getWeather(city) {
     }
   }
 
+// Event listener for the search button click
 searchBtn.addEventListener("click", () => {
   var userInput = inputValue.val().trim();
   if (userInput !== "") {
@@ -106,12 +123,14 @@ alert("Please enter a city!");
   }
 });
 
+// Event listener for clearing search history
 clear.on("click", function() {
   localStorage.removeItem("recents");
   recentSearches.length = 0;
   renderRecents();
 });
 
+// Async function to fetch UV index data for a given coordinates
 async function uvIndex(lat, lon) {
   var uviUrl =
     "https://api.openweathermap.org/data/2.5/onecall?lat=" +
@@ -131,6 +150,7 @@ async function uvIndex(lat, lon) {
     var uviLine = document.querySelector(".uviValue")
     uviLine.textContent = uviValue;
 
+    // Set UV index badge color based on value
     if (uviValue >= 8) {
         uviLine.classList.add("badge", "badge-danger");
     }
@@ -144,6 +164,7 @@ async function uvIndex(lat, lon) {
         uviLine.classList.add("badge", "badge-info");
     }
 
+    // Prepares HTML string for 5-day forecast cards
     var cardString = "";
     var fiveDayHeader = document.querySelector(".five-day-forecast");
     var forecastHeader = document.querySelector(".fiveDayHeader");

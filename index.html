@@ -19,22 +19,28 @@
 
   <main class="container">
     <div class="row">
+      <!-- Sidebar column -->
       <div class="col-sm-3">
+        <!-- Search input form -->
         <h4 class="searchCityHeader">Search for a City:</h4>
         <form class="input-group mb-3">
         <input type="text" class="inputValue" id="inputValue" placeholder="Enter your city" />
+        <!-- Search button with magnifying glass icon -->
         <div class="input-group-append">
           <button class="searchBtn btn btn-primary" id="searchButton" type="button">            
             <i><span class="oi oi-magnifying-glass"></span></i> </button>
         </div>
       </form>
+      <!-- Clear history button -->
       <button class="btn btn-primary mb-3" type="button" id="clearHistory">Clear history</button>
+        <!-- Form for displaying recent searches -->
         <form id="recent"></form>
         </ul>
       </div>
 
       <div class="col-sm-9 display">
         <div class="current-weather hide card">
+          <!-- Current weather card -->
           <h2 class="city-date-icon"></h2>
           <p class="temp"></p>
           <p class="humidity"></p>
@@ -44,9 +50,11 @@
             <i class="uviValue"></i>
           </p>
         </div>
+        <!-- 5-day forecast section -->
         <div class="d-flex five-day-forecast">
           <h3 class="fiveDayHeader"></h3>
-          <br />
+          <br/>
+          <!-- Container for forecast cards -->
           <div id="cards" class="col-12 d-flex"></div>
         </div>
       </div>
