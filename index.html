@@ -13,39 +13,46 @@
     <title>Weather Dashboard</title>
 </head>
 <body>
-    <header>
-        <h1>Weather Dashboard</h1>
-    </header>
-    <main class="container">
-        <div class="row">
-            <div class="col-sm-3">
-                <h4 class="search-city-header">Search for a City:</h4>
-                <form class="input-group mb-3">
-                    <input type="text" class="input-value form-control" id="inputValue" placeholder="City Search" />
-                    <div class="input-group-append">
-                        <button class="search-btn btn btn-primary" id="searchButton" type="button">Search</button>
-                    </div>
-                </form>
-                <button class="btn btn-primary mb-3" type="button" id="clearHistory">Clear</button>
-                <form id="recent"></form>
-            </div>
-  
-            <div class="col-sm-9 display">
-                <div class="current-weather">
-                    <h2 class="city-date-icon"></h2>
-                    <p class="temperature"></p>
-                    <p class="humidity"></p>
-                    <p class="wind"></p>
-                    <p class="uvi">UV Index: <i class="uvi-value"></i></p>
-                </div>
-                
-                <div class="d-flex five-day-forecast">
-                    <h3 class="five-day-header"></h3>
-                    <div id="cards" class="col-12 d-flex"></div>
-                </div>
-            </div>
+  <header>
+    <h1>Weather Dashboard</h1>
+  </header>
+
+  <main class="container">
+    <div class="row">
+      <div class="col-sm-3">
+        <h4 class="searchCityHeader">Search for a City:</h4>
+        <form class="input-group mb-3">
+        <input type="text" class="inputValue" id="inputValue" placeholder="Enter your city" />
+        <div class="input-group-append">
+          <button class="searchBtn btn btn-primary" id="searchButton" type="button">            
+            <i><span class="oi oi-magnifying-glass"></span></i> </button>
         </div>
-    </main>
+      </form>
+      <button class="btn btn-primary mb-3" type="button" id="clearHistory">Clear</button>
+        <form id="recent"></form>
+        </ul>
+      </div>
+
+      <div class="col-sm-9 display">
+        <div class="current-weather hide card">
+          <h2 class="city-date-icon"></h2>
+          <p class="temp"></p>
+          <p class="humidity"></p>
+          <p class="wind"></p>
+          <p class="uvi">
+            UV Index:
+            <i class="uviValue"></i>
+          </p>
+        </div>
+        <div class="d-flex five-day-forecast">
+          <h3 class="fiveDayHeader"></h3>
+          <br />
+          <div id="cards" class="col-12 d-flex"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
     <script src="./assets/script.js"></script>
 </body>
 </html>

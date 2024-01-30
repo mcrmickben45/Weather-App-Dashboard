@@ -1,0 +1,63 @@
+header {
+    background: linear-gradient(to right, royalblue, rgb(87, 8, 87));
+    text-align: center;
+    padding: 20px;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-weight: bold;
+}
+
+.searchCityHeader {
+    margin-top: 20px;
+    color: black;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+    background-color: rgb(231, 231, 231);
+}
+
+.container {
+    margin-left: 15px;
+    padding-left: 15px;
+    min-width: 200px;
+}
+
+h3 {
+    margin: 15px;
+}
+
+input {
+    margin-left: 15px;
+}
+
+.five-day-forecast {
+    flex-direction: column;
+    color: black;
+}
+
+.card {
+    margin: 15px;
+    min-width: 100px;
+}
+
+.dateHeader {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+.current-weather {
+    padding: 15px;
+    background-color: white;
+}
+
+.fiveDayCard {
+    padding: 15px;
+    background-color: white;
+    color: black;
+}
