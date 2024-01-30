@@ -3,10 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Page Title</title>
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="./assets/style.css"/>
 </head>
 <body>
 
-    <script src="your-script.js"></script>
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+
+    <main>
+        <!-- Search Form -->
+        <section id="search-section">
+            <form id="search-form">
+                <label for="city-input">Enter city name:</label>
+                <input type="text" id="city-input" placeholder="City name" required>
+                <button type="submit">Search</button>
+            </form>
+        </section>
+
+        <!-- Current Weather Display -->
+        <section id="current-weather">
+            <h2 id="city-name"></h2>
+            <p id="date"></p>
+            <p id="temperature"></p>
+            <p id="humidity"></p>
+            <p id="wind-speed"></p>
+            <p id="uv-index"></p>
+        </section>
+
+        <!-- 5 Day Forecast Display -->
+        <section id="five-day-forecast">
+            <h2>5-Day Forecast</h2>
+            <!-- Add cards -->
+        </section>
+
+        <!-- Search History -->
+        <section id="search-history">
+            <h2>Search History</h2>
+            <!-- JS Functionality -->
+        </section>
+    </main>
+
+    <script src="./assets/script.js"></script>
 </body>
 </html>
