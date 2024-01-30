@@ -36,5 +36,12 @@ This Weather Dashboard was created by Ben McCormick following the demo provided 
 ## Website
 https://mcrmickben45.github.io/Weather-App-Dashboard/
 
+
+<img width="1435" alt="Screen Shot 2024-01-30 at 4 02 44 AM" src="https://github.com/mcrmickben45/Weather-App-Dashboard/assets/137113252/3438e891-e753-4cc0-9b7b-62ede4eb99de">
+<img width="1422" alt="Screen Shot 2024-01-30 at 4 03 07 AM" src="https://github.com/mcrmickben45/Weather-App-Dashboard/assets/137113252/32710192-db89-4ca6-9d7c-92acf13655a2">
+<img width="1432" alt="Screen Shot 2024-01-30 at 4 03 26 AM" src="https://github.com/mcrmickben45/Weather-App-Dashboard/assets/137113252/55fab7ee-8283-4595-9da5-2841db13d2dc">
+
+
+
 ## License
 MIT License
