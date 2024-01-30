@@ -46,4 +46,5 @@ https://mcrmickben45.github.io/Weather-App-Dashboard/
 
 
 ## License
-MIT License
+The MIT License (MIT)
+Copyright © 2024 <copyright Ben McCormick>
